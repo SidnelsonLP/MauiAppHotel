@@ -14,12 +14,14 @@
             FontSize="55"
             TextColor="{StaticResource OffBlack}" />
 
-        <Frame Padding="10">
+        <Frame Padding="10"
+               BackgroundColor="{StaticResource OffBlack}">
             <VerticalStackLayout>
                 <Grid RowDefinitions="Auto, Auto"
                          ColumnDefinitions="*, *, 2*">
                     <Label Grid.Row="0" Grid.Column="0"
-                           Text="Adultos:" />
+                           Text="Adultos:" 
+                           TextColor="BlanchedAlmond"/>
 
                     <Label Grid.Row="0" Grid.Column="1"
                            TextColor="{StaticResource Primary}"
@@ -27,13 +29,15 @@
                            BindingContext="{x:Reference stp_adultos}"/>
 
                     <Stepper Grid.Row="0" Grid.Column="2"
+                             BackgroundColor="BlanchedAlmond"
                              x:Name="stp_adultos"
                              Minimum="0"
                              Maximum="10"
                              Increment="1" />
 
                     <Label Grid.Row="1" Grid.Column="0"
-                           Text="Crianças:" />
+                           Text="Crianças:" 
+                           TextColor="BlanchedAlmond"/>
                     
                     <Label Grid.Row="1" Grid.Column="1"
                            TextColor="{StaticResource Primary}"
@@ -41,33 +45,42 @@
                            BindingContext="{x:Reference stp_criancas}"/>
 
                     <Stepper Grid.Row="1" Grid.Column="2"
-                           x:Name="stp_criancas"
-                           Minimum="0"
-                           Maximum="10"
-                           Increment="1" />
+                             BackgroundColor="BlanchedAlmond"
+                             x:Name="stp_criancas"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1" />
                 </Grid>
 
-                <Label Text="Escolha sua Suíte"/>
+                <Label Text="Escolha sua Suíte"
+                       TextColor="BlanchedAlmond"/>
 
                 <Picker x:Name="pck_quarto"
-                        Title="Selecione a sua Acomodação"
+                        Title="Selecione a sua Acomodação" 
+                        BackgroundColor="BlanchedAlmond"
                         ItemDisplayBinding="{Binding Descricao}"/>
 
                 <Frame Padding="10"
-                       Margin="10">
+                       Margin="10"
+                       BackgroundColor="{StaticResource OffBlack}">
                     <VerticalStackLayout>
-                        <Label Text="Período da Estadia"/>
+                        <Label Text="Período da Estadia"
+                               TextColor="BlanchedAlmond"/>
                         <HorizontalStackLayout>
-                            <Label Text="Check-in:" />
+                            <Label Text="Check-in:" 
+                                   TextColor="BlanchedAlmond"/>
                             <DatePicker x:Name="dtpck_checkin"
+                                        BackgroundColor="BlanchedAlmond"
                                         DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/mm/yyyy" />
 
                         </HorizontalStackLayout>
                         
                         <HorizontalStackLayout>
-                            <Label Text="Check-out:" />
+                            <Label Text="Check-out:" 
+                                   TextColor="BlanchedAlmond"/>
                             <DatePicker x:Name="dtpck_checkout"
+                                        BackgroundColor="BlanchedAlmond"
                                         Format="dd/mm/yyyy" />
 
                         </HorizontalStackLayout>
@@ -76,7 +89,9 @@
                     
                 </Frame>
 
-                <Button Text="Avançar" Clicked="Button_Clicked" />
+                <Button Text="Avançar" Clicked="Button_Clicked" 
+                        BackgroundColor="{StaticResource OffBlack}"
+                        TextColor="BlanchedAlmond"/>
                 
 
 
