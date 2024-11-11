@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Gray300}">
+    <VerticalStackLayout VerticalOptions="Fill"
+                         Padding="10">
+        <Label 
+           Text="Sobre o Aplicativo:" 
+           FontFamily="RougeScriptRegular"
+           FontSize="55"
+           TextColor="{StaticResource OffBlack}" />
+
+        <!-- primeira caixa retangular com imagem -->
+        <Frame BackgroundColor="{StaticResource OffBlack}"
+               CornerRadius="10"
+               HeightRequest="250"
+               Margin="0,10,0,20"
+               HorizontalOptions="Fill">
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <!-- Imagem dentro da segunda caixa -->
+                <Image Source="hotel_app.png"
+                       HeightRequest="200"
+                       WidthRequest="300"
+                       Aspect="AspectFit"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+            </VerticalStackLayout>
+        </Frame>
+
+        <!-- segunda caixa retangular -->
+        <Frame BackgroundColor="{StaticResource OffBlack}"
+               CornerRadius="10"
+               HeightRequest="90"
+               Margin="0,20,0,10"
+               HorizontalOptions="Fill">
+            <Grid RowDefinitions="Auto, Auto">
+                <Label Text="Desenvolvido por Sidnelson Lucas Porto"
+               TextColor="BlanchedAlmond"
+                       FontSize="12"                     
+               HorizontalOptions="Center"
+               VerticalOptions="Center" 
+               Grid.Row="0" />
+                <Label Text="© 2024 SLP Mobile"
+               TextColor="BlanchedAlmond"
+                       FontSize="12"
+                       
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Grid.Row="1" />
+            </Grid>
+        </Frame>
+        <!-- Botão de Voltar -->
+        <Button Text="Voltar"
+                BackgroundColor="{StaticResource OffBlack}"
+                TextColor="BlanchedAlmond"
+                CornerRadius="10"
+                HeightRequest="50"
+                Margin="0,20,0,0"
+                HorizontalOptions="Fill"/>
+        
+    </VerticalStackLayout>
+</ContentPage>
