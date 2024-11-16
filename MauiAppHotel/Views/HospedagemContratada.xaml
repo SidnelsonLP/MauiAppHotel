@@ -10,8 +10,8 @@
         <Label Text="{Binding QuartoSelelcionado.Descricao}" 
                TextColor="{StaticResource OffBlack}"
                FontFamily="RougeScriptRegular"
-               FontSize="50"
-               HorizontalTextAlignment="Center"/>
+               FontSize="Large"
+               HorizontalTextAlignment="Start"/>
 
         <Frame Margin="10"
                BackgroundColor="{StaticResource OffBlack}">
