@@ -7,7 +7,8 @@
              BackgroundColor="{StaticResource Gray300}">
     
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
-                         Padding="10">
+                         Padding="10"
+                         Spacing="10">
         <Label 
             Text="Cálculo da Diária" 
             FontFamily="RougeScriptRegular"
@@ -52,22 +53,34 @@
                              Increment="1" />
                 </Grid>
 
-                <Label Text="Escolha sua Suíte"
-                       TextColor="BlanchedAlmond"/>
-
-                <Picker x:Name="pck_quarto"
-                        Title="Selecione a sua Acomodação" 
-                        BackgroundColor="BlanchedAlmond"
-                        ItemDisplayBinding="{Binding Descricao}"/>
-
                 <Frame Padding="10"
                        Margin="10"
                        BackgroundColor="{StaticResource OffBlack}">
                     <VerticalStackLayout>
+
+                    <Label Text="Escolha sua Suíte"
+                       TextColor="BlanchedAlmond"
+                       FontSize="Subtitle"/>
+                    <Label Text=" Selecione sua Acomodação"
+                       TextColor="BlanchedAlmond"/>
+
+                    <Picker x:Name="pck_quarto"                                         
+                        BackgroundColor="BlanchedAlmond"
+                        ItemDisplayBinding="{Binding Descricao}"/>
+            </VerticalStackLayout>
+                 </Frame>
+
+
+
+        <Frame Padding="10"
+                       Margin="10"
+                       BackgroundColor="{StaticResource OffBlack}">
+                    <VerticalStackLayout Spacing="10">
                         <Label Text="Período da Estadia"
-                               TextColor="BlanchedAlmond"/>
-                        <HorizontalStackLayout>
-                            <Label Text="Check-in:" 
+                               TextColor="BlanchedAlmond"
+                               FontSize="Subtitle"/>
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Check-in: " 
                                    TextColor="BlanchedAlmond"/>
                             <DatePicker x:Name="dtpck_checkin"
                                         BackgroundColor="BlanchedAlmond"
@@ -76,8 +89,8 @@
 
                         </HorizontalStackLayout>
                         
-                        <HorizontalStackLayout>
-                            <Label Text="Check-out:" 
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Check-out: " 
                                    TextColor="BlanchedAlmond"/>
                             <DatePicker x:Name="dtpck_checkout"
                                         BackgroundColor="BlanchedAlmond"
