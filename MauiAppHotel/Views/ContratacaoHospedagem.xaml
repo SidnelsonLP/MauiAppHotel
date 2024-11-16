@@ -102,9 +102,10 @@
                     
                 </Frame>
 
-                <Button Text="Avançar" Clicked="Button_Clicked" 
-                        BackgroundColor="{StaticResource OffBlack}"
-                        TextColor="BlanchedAlmond"/>
+                <Button Text="Avançar" Clicked="Button_Clicked"
+                        HorizontalOptions="Center"
+                        BackgroundColor="BlanchedAlmond"
+                        TextColor="{StaticResource OffBlack}"/>
                 
 
 
